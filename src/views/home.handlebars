@@ -1,0 +1,52 @@
+<title>Equipos</title>
+
+<h1 class='text-center'>Lista de equipos registrados</h1>
+<div class='text-center d-flex justify-content-center gap-3 align-items-center'>
+  <p>Hay {{getLength data.equipos}} equipos</p>
+  <a
+    type='button'
+    class='btn btn-primary boton align-middle d-inline-block'
+    href='/equipo/crear-equipo'
+  >Crear equipo</a>
+</div>
+<table
+  id='tabla-equipos'
+  class='table table-bordered border-dark table-striped w-50 justify-content-center'
+>
+  <thead>
+    <th>Nombre equipo</th>
+    <th>País</th>
+    <th>Acción</th>
+  </thead>
+  <tbody>
+    {{#each data.equipos as |equipo|}}
+      <tr class='container'>
+        <div class='row'>
+          <td class='col'><div><img
+                src='{{equipo.crestUrl}}'
+                alt='Escudo de {{equipo.name}}'
+                class='escudo-equipo'
+              /><span class='nombre-equipo'>{{equipo.name}}</span></div></td>
+          <td class='col-2'>{{equipo.area.name}}</td>
+          <td class='col-4'>
+            <a
+              type='button'
+              class='btn btn-primary boton'
+              href='/equipo/{{equipo.id}}/ver'
+            >Ver</a>
+            <a
+              href="/equipo/{{equipo.id}}/editar"
+              class='btn btn-secondary boton'
+            >Editar</a>
+            
+              <a
+              href="/equipo/{{equipo.id}}/eliminar"
+              class='btn btn-danger boton'
+              >Eliminar</a>
+            </td>
+            </form>
+        </div>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

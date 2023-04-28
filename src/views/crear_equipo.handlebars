@@ -1,0 +1,93 @@
+<title>Crear Equipo</title>
+<body>
+  <div class='w-75 m-auto'>
+    <h1 class='text-center'>Crear equipo</h1>
+    {{#if mensaje}}
+      <div class="alert alert-primary" role="alert">
+        <p class="text-center">{{mensaje}}</p>
+      </div>
+    {{/if}}
+    <form
+      id='crear-equipo'
+      action='/equipo/crear-equipo'
+      method='POST'
+      enctype='multipart/form-data'
+    >
+      <div class='w-50 m-auto'>
+        <div class='mb-3'>
+          <label for='nombre-input' class='form-label d-block'>Nombre</label>
+          <input
+            type='text'
+            class='form-control form-control-lg'
+            id='nombre-input'
+            name="nombre"
+            required
+          />
+        </div>
+        <div class='mb-3'>
+          <label
+            for='pais-input'
+            class='form-label d-block'
+          >País</label>
+          <input
+            type='text'
+            class='form-control form-control-lg'
+            id='pais-input'
+            name="pais"
+            required
+          />
+          </div>
+        <div class='mb-3'>
+          <label
+            for='fundacion-input'
+            class='form-label d-block'
+          >Fundación</label>
+          <input
+            type='text'
+            class='form-control form-control-lg'
+            id='fundacion-input'
+            name="fundacion"
+            required
+          />
+        </div>
+        <div class='mb-3'>
+          <label for='estadio-input' class='form-label d-block'>Estadio</label>
+          <input
+            type='text'
+            class='form-control form-control-lg'
+            id='estadio-input'
+            name="estadio"
+            required
+          />
+        </div>
+        <div class='mb-3'>
+          <label
+            for='direccion-input'
+            class='form-label d-block'
+          >Dirección</label>
+          <input
+            type='text'
+            class='form-control form-control-lg'
+            id='direccion-input'
+            name="direccion"
+            required
+          />
+        </div>
+        <div class='mb-3'>
+          <label for='input-escudo-equipo' class='form-label'>Imagen escudo
+            equipo</label>
+          <input
+            class='form-control form-control-lg'
+            name='imagen'
+            id='input-escudo-equipo'
+            type='file'
+            required
+          />
+        </div>
+      </div>
+      <div class='d-flex justify-content-center'>
+        <input type='submit' class='btn btn-primary boton' value="Crear Equipo"></inp>
+      </div>
+    </form>
+  </div>
+</body>
