@@ -1,0 +1,38 @@
+p,
+td,
+span,
+label {
+  font-size: 22px;
+}
+
+.boton {
+  font-size: 18px;
+}
+
+th {
+  font-size: 24px;
+}
+
+#tabla-equipos {
+  margin: 0 auto;
+}
+
+.escudo-equipo {
+  width: 10%;
+}
+
+.nombre-equipo {
+  margin-left: 1em;
+}
+
+#escudo-grande {
+  margin: 20px auto;
+}
+
+#titulo-equipo {
+  margin-bottom: 20px;
+}
+
+#contenedor-botones-equipo {
+  margin-top: 2em;
+}
